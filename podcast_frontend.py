@@ -110,6 +110,9 @@ def main():
 
     if process_button:
 
+        # Call the function to process the URLs and retrieve podcast guest information
+        podcast_info = process_podcast_info(url)
+        
         # Display the podcast title
         st.subheader(":orange[Episode Title]")
         # st.write(podcast_info['podcast_details']['episode_title'].replace(".mp3",""))
