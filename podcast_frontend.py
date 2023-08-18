@@ -110,12 +110,11 @@ def main():
 
     if process_button:
 
-        # Call the function to process the URLs and retrieve podcast guest information
-        podcast_info = process_podcast_info(url)
-
-       # Display the podcast title
+        # Display the podcast title
         st.subheader(":orange[Episode Title]")
-        st.write(podcast_info['podcast_details']['episode_title'])
+        # st.write(podcast_info['podcast_details']['episode_title'].replace(".mp3",""))
+        st.markdown(
+                f"<p style='margin-bottom: 2px; font-size: 22px;'>{podcast_info['podcast_details']['episode_title'].replace('.mp3','')}</p>", unsafe_allow_html=True)   
 
         # Display the podcast summary and the cover image in a side-by-side layout
         col1, col2 = st.columns([7, 3])
@@ -126,28 +125,41 @@ def main():
             st.write(podcast_info['podcast_summary'])
 
         with col2:
+    
             st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover",  use_column_width=True)
 
             # Episode Score By AI
+            
             st.markdown(
-                f"<p style='margin-bottom: 5px; font-size: 20px; font-weight: bold; text-align: center;'>Episode Score By AI</p>", unsafe_allow_html=True)
-
-           
-            st.markdown(
-                f"<p style='margin-bottom: 5px; text-align: center; font-size: 16px; color: yellow; font-weight: bold;'>{round(float(podcast_info['podcast_score']['score']),1)}</p>", unsafe_allow_html=True)
-
-        # Display the podcast guest and their details
+                    f"""<div style='background-color: #FF5F2A; padding: 11px; border-radius: 9px;'><h3 style='margin-bottom: 5px; color:#273346; text-align: center;'>Score By AI</h3>
+                    <p style='margin-bottom: 5px; text-align: center; font-size: 28px; color: #ffffff; font-weight: bold;'>{round(float(podcast_info['podcast_score']['score']),1)}/5.0</p>
+                    </div>""", unsafe_allow_html=True)
+            
+        # Display the podcast guest and their details 
        
-        st.subheader(":orange[Podcast Guest]")
+        st.subheader(":orange[Episode Guest]")
         st.write(podcast_info['podcast_guest'])
 
     
-        st.subheader(":orange[Podcast Guest Details]")
-        st.write(podcast_info["podcast_guest_details"]['Guest Job'])
+        st.subheader(":orange[Guest Informarion]")
+        # st.write(podcast_info["podcast_guest_details"]['Guest Job'])
+        guest_details = podcast_info["podcast_guest_details"]
+        for info in guest_details:
+
+            st.markdown(
+                f"<p style='margin-bottom: 2px;'>{info}: {guest_details[info]}</p>", unsafe_allow_html=True)   
+        
+
+         # Display the Episode Review
+        st.subheader(":orange[Review By AI]")
+        # st.write(podcast_info['podcast_score']['review'])
+        st.markdown(
+                f"<p style='background-color: #FF5F2A; padding: 11px; border-radius: 9px; font-weight: bold;'>{podcast_info['podcast_score']['review']}</p>", unsafe_allow_html=True)
 
         # Display the four key moments
         st.subheader(":orange[Key Moments]")
         key_moments = podcast_info['podcast_highlights']
+
         st.markdown(
                 f"<ul style='margin-bottom: 5px;>", unsafe_allow_html=True)
         for moment in key_moments:
