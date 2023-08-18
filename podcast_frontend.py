@@ -189,7 +189,7 @@ def create_dict_from_json_files(folder_path):
 
 def process_podcast_info(url):
     f = modal.Function.lookup("corise-podcast-project-full", "process_podcast")
-    output = f.call(url, '/Podcast/')
+    output = f.call(url, './')
     return output
 
 if __name__ == '__main__':
