@@ -35,3 +35,7 @@ button[kind="secondary"] div p:hover{
 section[data-testid="stSidebar"] h3{
     color:#000;
 }
+
+li[role="option"]{
+    background-color: #577dd5;
+}
