@@ -34,6 +34,9 @@ def main():
 
     # User Input box
     st.sidebar.subheader("Add and Process New Podcast Feed")
+     st.sidebar.markdown(
+                f"<p style='margin-bottom: 5px; color:#000; font-style:italic; font-weight: bold;'>Don't Use RSS feed. Use the castbox Podcast URL</p>", unsafe_allow_html=True)   
+
     url = st.sidebar.text_input("Castbox Podcast URL", placeholder="example: https://castbox.fm/channel/How-to-Talk-to-People-id4580807?country=us")
     
 
