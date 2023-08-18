@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap'); 
+
+
+/********* Change Font Face ***********/
+html, body, [class*="css"] {
+    font-family: 'Roboto', sans-serif; 
+}
+
+p{ 
+text-align: justify;
+} 
+
+/********* Reduce Title Font Size ***********/
+
+h1{
+    font-size: 2.5rem;
+}
+
+/********* Mekr the Top Margin Smaller ***********/
+
+.css-1y4p8pa {
+    width: 100%;
+    padding: 4rem 1rem 10rem; }
+
+ /********* Change Process Feed background color ***********/
+button[kind="secondary"]{
+    background-color: #C70039;
+}
+
+/********* Change Process Feed button text on mousehover ***********/
+button[kind="secondary"] div p:hover{
+    color: yellow;
+}
+
+section[data-testid="stSidebar"] h3{
+    color:#000;
+}
