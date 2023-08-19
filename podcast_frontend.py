@@ -88,7 +88,7 @@ def main():
         for info in guest_details:
 
             st.markdown(
-                f"<p style='margin-bottom: 2px;'><span style="font-weight: bold;">{info}:</span> {guest_details[info]}</p>", unsafe_allow_html=True)   
+                f"<p style='margin-bottom: 2px;'><span style='font-weight: bold;'>{info}:</span> {guest_details[info]}</p>", unsafe_allow_html=True)   
         
 
          # Display the Episode Review
