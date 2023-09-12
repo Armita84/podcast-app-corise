@@ -35,9 +35,13 @@ You can listen to the Podcast Audio in the app as well.
 ## Files/Folders in the Repo:
 
 1- ##.stremlit ## : the Streamlit app config file
+
 2- ## podcast_frontend.py ## : the frontend file for app development in Streamlit 
+
 3- ## requirements.txt ## : required libraries for running the project 
+
 4- ##style.css ## : the style of app 
+
 5- ##new## : the result of the OpenAI models for each episode to be fed into frontend
 
 
