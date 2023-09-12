@@ -15,7 +15,7 @@ def main():
     with col2:
         st.title("CastBox Newsletter Dashboard")
 
-    available_podcast_info = create_dict_from_json_files('.')
+    available_podcast_info = create_dict_from_json_files('./new/')
 
     tcol1, tcol2 = st.columns([2, 8])
 
@@ -46,6 +46,8 @@ def main():
         st.markdown(
                 f"<p style='margin-bottom: 2px; font-size: 22px;'>{podcast_info['podcast_details']['episode_title'].replace('.mp3','')}</p>", unsafe_allow_html=True)   
 
+        # Display the podcast audio
+        st.audio(podcast_info['podcast_details']['episode_audio'], format="mp3", start_time=0, sample_rate=None)
         # Display the podcast summary and the cover image in a side-by-side layout
         col1, col2 = st.columns([7, 3])
 
