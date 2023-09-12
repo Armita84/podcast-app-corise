@@ -38,7 +38,7 @@ def main():
 
         # Right section - Newsletter content
         st.header(":orange[Newsletter Summary]")
-        st.image("podcast-mic.png", use_column_width=False)
+        st.image("podcast-mic.png", use_column_width=True)
 
         # Display the podcast title
         st.subheader(":orange[Episode Title]")
