@@ -28,7 +28,8 @@ and the episodes of a podcast are collected only by passing the Castbox Podcast 
 5- The podcast episode summary, the episode title, image and the guest info and highlighted moments; as well as the review and rate done by AI are 
 shown in the newsletter page in the Streamlit app.  
 
-Users can navigate to different episodes from the left sidebar of the app and read the summary of that episode.
+You navigate to different episodes from the left sidebar of the app and read the summary of that episode.
+
 You can listen to the Podcast Audio in the app as well.
 
 ## Files/Folders in the Repo:
